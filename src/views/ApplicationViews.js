@@ -2,6 +2,12 @@ import { Route, Routes } from "react-router-dom"
 import { Login } from "../components/auth/Login"
 import { Register } from "../components/auth/Register"
 import { Authorized } from "./Authorized"
+import { GameList } from "../components/game/GameList"
+import { EventList } from "../components/game/EventList"
+import { GameForm } from "../components/game/GameForm"
+import { EventForm } from "../components/game/EventForm"
+import { UpdateGame } from "../components/game/GameUpdate"
+import { EventUpdate } from "../components/game/EventUpdate"
 
 
 export const ApplicationViews = () => {
@@ -10,7 +16,12 @@ export const ApplicationViews = () => {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route element={<Authorized />}>
-                {/* Add Routes here */}
+                <Route path="/games" element={<GameList />} />
+                <Route path="/events" element={<EventList />} />
+                <Route path="/games/new" element={<GameForm />} />
+                <Route path="/events/new" element={<EventForm />} />
+                <Route path="/games/:gameId/update" element={<UpdateGame />} />
+                <Route path="/events/:eventId/update" element={<EventUpdate />} />
             </Route>
         </Routes>
     </>

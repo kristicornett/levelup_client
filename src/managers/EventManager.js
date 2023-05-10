@@ -67,7 +67,6 @@ export const joinEvent = (eventId) => {
         "Content-Type": "application/json",
         Authorization: `Token ${localStorage.getItem('lu_token')}`
       },
-      body: JSON.stringify()
     })
       .then(res => res.json())
   }

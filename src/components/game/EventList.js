@@ -34,7 +34,7 @@ export const EventList = (props) => {
                         <div className="event__game">Playing: {event?.game?.title}</div>
                         <button onClick={() => deleteEvent(event.id)}>Delete</button>
                         {event.joined === true ? (
-                            <button onClick={() => leaveEvent(event.id)}>Leave Event</button>
+                            <button onClick={() => leaveEvent(event.id)} >Leave Event</button>
                         ) : (
                             <button onClick={() => joinEvent(event.id)}>Join Event</button>
                         )}
